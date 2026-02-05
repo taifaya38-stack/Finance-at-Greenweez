@@ -11,29 +11,29 @@ The analysis was fully implemented in Google Sheets, following a structured, ana
 
 The finance team requires a daily profitability report that enables them to:
 
-Monitor business performance on a daily basis
+- Monitor business performance on a daily basis
 
-Track the relationship between revenue and costs
+- Track the relationship between revenue and costs.
 
-Calculate and compare multiple types of margins
+- Calculate and compare multiple types of margins.
 
-Identify cost drivers impacting profitability over time
+- Identify cost drivers impacting profitability over time.
 
 📊 Key Financial KPIs
 
 Before analyzing the data, the following KPIs were defined:
 
-Margin = Revenue − Purchase Costs
+- Margin = Revenue − Purchase Costs
 
-Margin Percentage
+- Margin Percentage
 
-Operational Margin (after logistics & shipping costs)
+- Operational Margin (after logistics & shipping costs)
 
-Refund Margin
+- Refund Margin
 
-Advertising Margin
+- Advertising Margin
 
-Final Margin (including refunds and advertising costs)
+- Final Margin (including refunds and advertising costs)
 
 These metrics allow a progressive and realistic view of profitability.
 
@@ -41,136 +41,138 @@ These metrics allow a progressive and realistic view of profitability.
 
 The analysis is based on four financial datasets:
 
-gwz_finance_orders – orders and revenue
+- gwz_finance_orders – orders and revenue
 
-gwz_finance_campaign – advertising costs
+- gwz_finance_campaign – advertising costs
 
-gwz_finance_shipping – logistics and shipping costs
+- gwz_finance_shipping – logistics and shipping costs
 
-gwz_finance_refund – refunds and associated costs
+- gwz_finance_refund – refunds and associated costs
 
 Data was imported using manual CSV imports and IMPORTRANGE, depending on the source and update requirements.
 
 🛠 Methodology
+
 I. Data Import
 
-Manual import of campaign and refund CSV files
+- Manual import of campaign and refund CSV files.
 
-Automated imports using IMPORTRANGE() for orders and shipping
+- Automated imports using IMPORTRANGE() for orders and shipping.
 
-Initial exploration of columns and data completeness
+- Initial exploration of columns and data completeness.
 
 II. Data Cleaning
 
 Several cleaning steps were required before analysis:
 
-Standardization of date formats across all datasets
+- Standardization of date formats across all datasets
 
-Creation of clean date columns using:
+- Creation of clean date columns using:
 
-SUBSTITUTE
+- SUBSTITUTE
 
-LEFT, LEN
+- LEFT, LEN
 
-DATE, YEAR, MONTH, DAY
+- DATE, YEAR, MONTH, DAY
 
-Detection of anomalies and extreme values
+- Detection of anomalies and extreme values
 
-Investigation of abnormal purchase and logistics costs
+- Investigation of abnormal purchase and logistics costs
 
-Handling limitations of IMPORTRANGE (filters & sorting)
+- Handling limitations of IMPORTRANGE (filters & sorting)
 
 III. Margin Calculations
+
 1️⃣ Order Margin
 
-Gross margin = turnover − purchase cost
+- Gross margin = turnover − purchase cost
 
-Margin percentage calculated and formatted
+- Margin percentage calculated and formatted
 
 2️⃣ Operational Margin
 
-Integration of logistics and shipping costs using XLOOKUP
+- Integration of logistics and shipping costs using XLOOKUP
 
 Calculation of:
 
-Operational margin
+- Operational margin
 
-Operational margin percentage
+- Operational margin percentage
 
 3️⃣ Advanced Margins
 
-Refund margin (operational margin − refund costs)
+- Refund margin (operational margin − refund costs)
 
-Advertising margin (operational margin − ads costs)
+- Advertising margin (operational margin − ads costs)
 
-Evaluation of how advertising impacts daily profitability
+- Evaluation of how advertising impacts daily profitability
 
 IV. Data Aggregation & Reporting
 
 A daily profitability report was built using pivot tables:
 
-Metrics aggregated by day include:
+1- Metrics aggregated by day include:
 
-Number of orders
+- Number of orders
 
-Total & average turnover
+- Total & average turnover
 
-Purchase costs
+- Purchase costs
 
-Shipping & logistics costs
+- Shipping & logistics costs
 
-Margins (gross, operational, ads-adjusted)
+- Margins (gross, operational, ads-adjusted)
 
-Advertising costs were added using XLOOKUP, and additional KPIs were computed:
+2- Advertising costs were added using XLOOKUP, and additional KPIs were computed:
 
-Ads margin
+- Ads margin
 
-Average ads margin per order
+- Average ads margin per order
 
-Ads margin percentage
+- Ads margin percentage
 
 V. Refund Analysis (Advanced)
 
-Analysis of daily refund volume
+- Analysis of daily refund volume
 
-Calculation of refund delays
+- Calculation of refund delays
 
-Separation of refund aggregation from order dates
+- Separation of refund aggregation from order dates
 
-Correct integration of refund costs based on refund date, not order date
+- Correct integration of refund costs based on refund date, not order date
 
-Final margin calculation including all cost components
+- Final margin calculation including all cost components
 
 📈 Key Outcomes
 
-Built a complete daily financial reporting system in Google Sheets
+- Built a complete daily financial reporting system in Google Sheets
 
-Identified how logistics, refunds, and advertising impact margins
+- Identified how logistics, refunds, and advertising impact margins
 
-Delivered actionable KPIs for the finance team
+- Delivered actionable KPIs for the finance team
 
-Demonstrated strong data cleaning, aggregation, and financial modeling skills
+- Demonstrated strong data cleaning, aggregation, and financial modeling skills
 
 🧪 Tools & Skills Used
 
-Google Sheets (advanced formulas & pivot tables)
+- Google Sheets (advanced formulas & pivot tables)
 
-Data Cleaning & Transformation
+- Data Cleaning & Transformation
 
-Financial KPI Modeling
+- Financial KPI Modeling
 
-XLOOKUP / INDEX-MATCH
+- XLOOKUP / INDEX-MATCH
 
-Pivot Tables & Calculated Fields
+- Pivot Tables & Calculated Fields
 
-Business & Financial Analysis
+- Business & Financial Analysis
 
 🏁 Conclusion
 
 This project demonstrates how structured data analysis and financial modeling can support profitability monitoring and decision-making in an e-commerce environment.
 By progressively integrating costs and aggregating results at a daily level, the analysis provides a clear and realistic view of business performance.
 
-👤 Author :taif_Aya
+👤 Author :Taif_Aya
 
 Data Analyst – Academic / Portfolio Project
 Focused on financial reporting and profitability analysis
